@@ -78,7 +78,9 @@ def subscribe(client: mqtt_client, topic_):
             #    print(speech)
             #    #publish_message(client, "announce/raspi1/speak", speech)
             #say_to_file(test_str2)
-            os.system('mycroft-speak ' + '"' + test_str2 + '"')
+            str_cmd = 'mycroft-speak ' + '"' + test_str2 + '"'
+            print(str_cmd)
+            os.system(str_cmd)
                                 
             #if msg.payload.decode() == "ON":
             #    publish_message(client, "house/jerry/alert", "OFF")
